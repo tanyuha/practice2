@@ -25,6 +25,10 @@ implements ActionListener {
     private int start_angle = 0;
     private int shape;
 
+    /**
+     * Constructor class TitlesPanel
+     * @param _shape parameter for type figure and color or type border.
+     */
     public TitlesPanel(int _shape) {
         this.shape = _shape;
         this.animation = new Timer(50, this);
@@ -39,6 +43,10 @@ implements ActionListener {
         }
     }
 
+    /**
+     * Draw figures on panel.
+     * @param g (see {@link Graphics}).
+     */
     private void doDrawing(Graphics g) {
         this.is_done = false;
         this.g2d = (Graphics2D)g;

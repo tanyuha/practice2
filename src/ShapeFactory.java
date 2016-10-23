@@ -19,6 +19,10 @@ public class ShapeFactory {
     public int width = 25;
     public int height = 25;
 
+    /**
+     * Constructor class ShapeFactory.
+     * @param shape_type parameter for type figure and color or type border.
+     */
     public ShapeFactory(int shape_type) {
         switch (shape_type / 10) {
             case 1: {
@@ -77,6 +81,14 @@ public class ShapeFactory {
         }
     }
 
+    /**
+     * Special method for creating multi-angle star.
+     * @param arms count angles.
+     * @param center coordinat of point.
+     * @param rOuter - outer radius.
+     * @param rInner - inner radius.
+     * @return object of Sharp.
+     */
     private static Shape createStar(int arms, Point center, double rOuter, double rInner) {
         double angle = 3.141592653589793 / (double)arms;
         GeneralPath path = new GeneralPath();
